@@ -11,27 +11,70 @@
 
 /*Home main section discover*/
 
-main {
+body {
   background-color: #1d1a1a;
-  padding: 50px;
 }
 
 .border-color {
-  border: solid 5px;
+  position: relative;
   border-radius: 10px;
-  border-color: #7a0767;
-  padding: 60px 40px;
+  margin: 55px;
+  padding: 55px 60px;
+  width: 1666px;
+  height: 894px;
+  background-color: #1d1a1a;
+}
+
+.glow::before,
+.glow::after {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(
+    45deg,
+    #e6fb04,
+    #ff6600,
+    #00ff66,
+    #00ffff,
+    #ff00ff,
+    #ff0099,
+    #6e0dd0,
+    #ff3300,
+    #099fff
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.glow::after {
+  filter: blur(10px);
 }
 
 .last-news {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   background-image: url(../asset/img/lol-news.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   border-radius: 30px;
-  border: solid 1px #707070;
   width: 100%;
   height: 367px;
   margin-bottom: 55px;
@@ -45,7 +88,8 @@ main {
 .discover-button {
   display: flex;
   align-self: flex-end;
-  margin: 0 45px 45px 0;
+  text-align: center;
+  margin: 0 0 45px 45px;
   width: 289px;
   height: 53px;
   border-radius: 30px;
@@ -70,7 +114,6 @@ main {
   width: 443px;
   height: 248px;
   border-radius: 30px;
-  border: solid 1px #707070;
 }
 
 .select-contain {
@@ -79,7 +122,8 @@ main {
 }
 
 .select {
-  width: 328px;
+  text-align: center;
+  width: 289px;
   height: 53px;
   border-radius: 30px;
   background-color: #d8d0d9;
@@ -97,21 +141,21 @@ main {
   background-image: url(../asset/img/wow.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .lol {
   background-image: url(../asset/img/lol2.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .dofus {
   background-image: url(../asset/img/dofus.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 /* Partie nav bar */
 
