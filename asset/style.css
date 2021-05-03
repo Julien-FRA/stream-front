@@ -1,11 +1,115 @@
 /* Reset CSS */
 
 * {
-    margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
+/*Home main section discover*/
+
+main {
+  background-color: #1d1a1a;
+  padding: 50px;
+}
+
+.border-color {
+  border: solid 5px;
+  border-radius: 10px;
+  border-color: #7a0767;
+  padding: 60px 40px;
+}
+
+.last-news {
+  display: flex;
+  justify-content: flex-end;
+  background-image: url(../asset/img/lol-news.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 30px;
+  border: solid 1px #707070;
+  width: 100%;
+  height: 367px;
+  margin-bottom: 55px;
+}
+
+.discover {
+  display: flex;
+  justify-content: center;
+}
+
+.discover-button {
+  display: flex;
+  align-self: flex-end;
+  margin: 0 45px 45px 0;
+  width: 289px;
+  height: 53px;
+  border-radius: 30px;
+  background-color: #d8d0d9;
+  color: #0a0a0a;
+  font-size: 20px;
+}
+
+.news-title {
+  color: #d8d0d9;
+  font-size: 20px;
+}
+
+/*Home main section news*/
+
+.news {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-contain {
+  width: 443px;
+  height: 248px;
+  border-radius: 30px;
+  border: solid 1px #707070;
+}
+
+.select-contain {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.select {
+  width: 328px;
+  height: 53px;
+  border-radius: 30px;
+  background-color: #d8d0d9;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.section-countain {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 55px;
+}
+
+.wow {
+  background-image: url(../asset/img/wow.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.lol {
+  background-image: url(../asset/img/lol2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.dofus {
+  background-image: url(../asset/img/dofus.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
