@@ -7,6 +7,7 @@
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  font-family: "Roboto", sans-serif;
 }
 
 /*Home main section discover*/
@@ -134,29 +135,23 @@ body {
 .section-countain {
   display: flex;
   justify-content: space-between;
-  margin-top: 55px;
+  margin-top: 25px;
+  padding-top: 45px;
+  border-top: 1px solid gray;
 }
 
-.wow {
-  background-image: url(../asset/img/wow.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.lol-img,
+.wow-img,
+.dofus-img {
+  border-radius: 30px;
 }
 
-.lol {
-  background-image: url(../asset/img/lol2.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.title-news-img {
+  color: #d8d0d9;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
-.dofus {
-  background-image: url(../asset/img/dofus.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 /* Partie nav bar */
 
 /* Nav bar horizontal */
