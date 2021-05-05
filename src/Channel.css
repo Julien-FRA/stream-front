@@ -1,0 +1,21 @@
+.logo-mic {
+    display: flex;
+    width: 443px;
+    height: 248px;
+    border-radius: 30px;
+    background-color: grey;
+    margin-bottom: 15px;
+  }
+  
+  .channel-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .channel-name {
+    font-size: 20px;
+    color: #d8d0d9;
+    text-align: center;
+    margin-bottom: 50px;
+  }

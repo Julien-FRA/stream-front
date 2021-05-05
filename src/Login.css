@@ -1,0 +1,56 @@
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 720px;
+    height: 716px;
+    background-color: #2e2727;
+    padding: 60px;
+    border-radius: 30px;
+    border: solid 1px #7a0767;
+  }
+  
+  .log-button {
+    display: flex;
+    width: 683px;
+    height: 56px;
+    border-radius: 30px;
+    margin-bottom: 32px;
+  }
+  
+  .login-input,
+  .subscribe-input {
+    width: 50%;
+    color: #d8d0d9;
+    background-color: #6b5e5e;
+  }
+  
+  .login-input {
+    border-right: solid 1px black;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  
+  .subscribe-input {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  
+  .form-input {
+    color: #d8d0d9;
+    background-color: #6b5e5e;
+    border-radius: 30px;
+    width: 559px;
+    height: 56px;
+    margin-bottom: 32px;
+    padding-left: 10px;
+  }
+  
+  .form-submit {
+    width: 424px;
+    height: 56px;
+    border-radius: 30px;
+    color: #d8d0d9;
+    background-color: #6b5e5e;
+  }
