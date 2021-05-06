@@ -19,3 +19,21 @@
     text-align: center;
     margin-bottom: 50px;
   }
+
+  .change-channel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 443px;
+    height: 248px;
+  }
+
+  .change-channel input {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    color: #d8d0d9;
+    background-color: #6b5e5e;
+    border-radius: 30px;
+  }
