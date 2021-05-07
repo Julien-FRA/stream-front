@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+PROJET STREAM
 
-## Available Scripts
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-In the project directory, you can run:
+Groupe WOW : Julien FRANCOIS - Louis CHARLES
 
-### `npm start`
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Utilisation de l'app :
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-### `npm test`
+Connexion - Inscription
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Lors de l'ouverture de l'app on se retrouve sur la page de connexion, il faut cliquer sur le bouton s'inscrire
+pour créer un nouvel utilisateur. 
+Nous avons empêchés le parcours des autres composants de l'app si un utilisateur n'est pas inscrit en vérifiant 
+si un token et lié à cet utilisateur.
+Une fois la connexion réussie nous n'avons pas redirigé vers une autre page cependant la nav sur la gauche est 
+accessible.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+La première icône permet d'accéder à la partie login/inscription.
+La deuxième icône permet d'accéder à la page permettant de créer une room et de la rejoindre.
+La dernière icône renvoie sur la page d'accueil, dans l'idéal elle aurait servi à déconnecter l'utilisateur
+mais nous n'avons pas eu le temps de le traiter.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Deuxième icône - crée et rejoindre une room
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Sur cette page nous devons créer un nom d'utilisateur et un nom de room, nous aurions voulu reprendre automatiquement
+le nom d'utilisateur connecté ainsi que l'affichage automatique des rooms disponible.
+Il nous est demandé également de rentrer un nom de room afin de la rejoindre.
+Pour qu'un autre utilisateur puisse rejoindre cette même room il devra rentrer le même nom de room.
 
-## Learn More
+Si on clique sur la flèche en haut du chat nous sommes renvoyés aux composants de création de room. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-### Code Splitting
+Stream
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Pour qu'un utilisateur puisse streamer il doit rentrer dans OBS et indiquer :
 
-### Making a Progressive Web App
+paramètres -> stream -> Stream type : Serveur de stream personnalisé
+paramètres -> stream -> URL : rtmp://localhost/live
+paramètres -> stream -> Clé de stream : stream
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+et ne pas cocher l'authentification.
 
-### Advanced Configuration
+L'utilisateur ne peut que ce stream à lui-même, nous n'avons pas réussi à le lier à une session utilisateur et 
+faire en sorte que d'autres personnes connectées puissent y accéder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-### `npm run build` fails to minify
+Difficultées rencontrées 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+1-La techno
+
+On a perdu du temps au début du projet pour se familiariser avec React et Node que nous n'avions jamais utilisés
+auparavant. En effet nous avons commencé à coder en html / css classique pour ensuite basculer sur du React ce qui 
+nous a fait perdre pas mal de temps.
+
+2-Room
+
+Nous n'avons pas réussi à afficher la liste des rooms disponibles alors que l'on peut bien se connecter dessus en 
+rentrant le même nom dans la page de création de room.
+
+
+3-Chat
+
+Nous avons rencontré plusieurs difficultés lors de la création du chat. Au début nous n'avions qu'un chat général 
+sans room. De plus nous avons eu des difficultés avec les ports et les erreurs CORS.
+
+4-Stream
+
+Concernant le stream nous avons consulté de nombreux tuto et documentation, notamment node media server mais
+nous n'avons pas reussi à lier le stream à une room ou un utilisateur précis, le stream se lance lorsqu'on le 
+lance sur OBS mais ne sera pas visible par d'autres utilisateurs ( qui vont eux streamer leurs propres écrans).
+
+5-Mise en ligne 
+
+Nous n'avons pas réussi à mettre le projet en ligne à cause des multiples écoutent de port. Concernant azure nous avons
+essayé de créer une machine virtuelle sans grande réussite.
+La mise en ligne classique n'étant pas réalisable notre application n'est disponible qu'en local. 
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Conclusion
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+En conclusion, le projet et le thème général nous ont paru très intéressant du fait que le streaming et le chat sont
+des choses qui nous sont familières. Comprendre leurs fonctionnements était pour nous passionnant.
+
+La découverte des techno comme Node et React n'étaient pas évidentes mais sachant que ce sont des techno très demandées,
+leurs apprentissages ont été pour nous une chance d'enrichir nos connaissances.
