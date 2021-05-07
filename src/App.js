@@ -3,9 +3,9 @@ import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from "./Login";
 import NavBar from "./navBar";
-import Channel from "./Channel";
-import Stream from "./Stream";
 import useToken from "./useToken";
+import Chat from "./components/Chat/Chat";
+import Join from "./components/Join/Join";
 
 function App() {
   const { token, setToken } = useToken();
@@ -30,8 +30,8 @@ function App() {
         <NavBar />
         <article className="border-color glow">
           <Route path="/" exact component={Login} />
-          <Route path="/stream" exact component={Stream} />
-          <Route path="/channel" exact component={Channel} />
+          <Route path="/join" exact component={Join} />
+          <Route path="/chat" component={Chat} />
         </article>
       </Router>
     </main>

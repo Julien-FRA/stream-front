@@ -12,13 +12,7 @@ function NavBar() {
           </li>
         </Link>
 
-        <Link to="/stream">
-          <li>
-            <img src={process.env.PUBLIC_URL + "/bouton-jouer(1).png"} alt="" />
-          </li>
-        </Link>
-
-        <Link to="/channel">
+        <Link to="/join">
           <li>
             <img src={process.env.PUBLIC_URL + "/page-suivante.png"} alt="" />
           </li>

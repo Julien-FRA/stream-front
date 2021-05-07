@@ -1,27 +1,27 @@
 /* Nav bar vertical */
 main {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .nav-vertical {
-    background-color: #2e2727;
-    min-width: 8vw;
-  }
-  
-  .ul-vertical {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style-type: none;
-  }
-  
-  .ul-vertical li img {
-    width: 3vw;
-    padding: 25px;
-  }
-  
-  .ul-vertical li img:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-  }
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-vertical {
+  background-color: #2e2727;
+  min-width: 8vw;
+}
+
+.ul-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+}
+
+.ul-vertical li img {
+  max-width: 3vw;
+  padding: 25px;
+}
+
+.ul-vertical li img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
