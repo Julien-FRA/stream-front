@@ -2,6 +2,7 @@ import React, { useState, Component } from "react";
 import PropTypes from 'prop-types';
 import "./Channel.css";
 import e from "cors";
+import useToken from './useToken';
 // import { response } from "express";
 // import { render } from "@testing-library/react";
 
@@ -54,6 +55,9 @@ async function deleteChannel(credentials) {
 
 function Channel() {
   const [channame, setChanName] = useState();
+  const { token, setToken } = useToken();
+  const { username, setUserName } = useToken();
+  console.log(useToken());
 
   const channels = fetch('http://localhost:3000/channels')
   .then((response) => {

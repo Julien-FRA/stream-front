@@ -1,30 +1,40 @@
-import React, { useState } from 'react';
-import './App.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Login from './Login';
-import Channel from './Channel';
-import Stream from './Stream';
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Login from "./Login";
+import NavBar from "./navBar";
+import Channel from "./Channel";
+import Stream from "./Stream";
+import useToken from "./useToken";
 
 function App() {
-  const [token, setToken] = useState();
+  const { token, setToken } = useToken();
+  const { username, setUserName } = useToken();
 
-  if(!token) {
-    return <article className="border-color glow"><Login setToken={setToken} /></article>
+  if (!token) {
+    return (
+      <main>
+        <Router>
+          <NavBar />
+        </Router>
+        <article className="border-color glow">
+          <Login setToken={setToken} setUserName={setUserName} />
+        </article>
+      </main>
+    );
   }
 
   return (
-    <article className="border-color glow">
-      <BrowserRouter>
-        <Switch>
-          <Route path="/channel">
-            <Channel />
-          </Route>
-          <Route path="/stream">
-            <Stream />
-          </Route>
-        </Switch>
-      </BrowserRouter>
-    </article>
+    <main>
+      <Router>
+        <NavBar />
+        <article className="border-color glow">
+          <Route path="/" exact component={Login} />
+          <Route path="/stream" exact component={Stream} />
+          <Route path="/channel" exact component={Channel} />
+        </article>
+      </Router>
+    </main>
   );
 }
 
